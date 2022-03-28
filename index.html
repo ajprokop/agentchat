@@ -1,0 +1,36 @@
+<!-- file:///C:/Users/ajprokop/OneDrive%20-%20Avaya/Documents/Projects/nodeJS/AgentChat/index.html?room=610d6f2fdac4a61e1ba22661&name=Andrew -->
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Spaces Webchat</title>
+      <link rel="stylesheet" href="css/chat.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="container-fluid">
+            <div class="col-sm-8 title-chat">
+               <figure><img src="images/chat.png" alt="" style="width: 75px;height: 75px;"/></figure>
+            </div>
+            <div class="col-sm-12 d-sm-flex d-block">
+               <textarea placeholder="Name" class="form-control" id="userChat" rows="1"></textarea>
+               <button id="connect" class="btn btn-danger p-3" onclick="startConnect()" style="margin-left: 40px;">Connect</button>
+            </div>
+            <div class="col-sm-12 mt-3 mb-3">
+               <div style="width: 100%" class="form-group mb-3">
+                  <textarea placeholder="Message" class="form-control" id="message" rows="1"></textarea>
+               </div>
+               <button style="padding: 0.8rem 8rem" id="sendMsg" class="btn btn-primary col-sm-12" onclick="sendMsg()" disabled>Send</button>
+            </div>
+            <div class="col-12">
+               <div id="console-log" class="console-div" readonly="">
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="js/chat.js"></script>
+   </body>
+</html>
