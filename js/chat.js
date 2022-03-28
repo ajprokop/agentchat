@@ -47,7 +47,6 @@ function connectSocket() {
 		console.log("Socket error");
 	});
 	socketio.on('CHANNEL_SUBSCRIBED', function() {
-		$('#chatMsg').prop("disabled", false);
 		$('#sendMsg').prop("disabled", false);
 		$('#message').prop("readonly", false);
 	});
@@ -67,7 +66,7 @@ function connectSocket() {
 		var description;
 		var strLength;
 		if(category == "chat") {
-			message = msg.content.bodyText.replace(/<(.|\n)*?>/g, '');;
+			message = msg.content.bodyText.replace(/<(.|\n)*?>/g, '');
 			if(msg.content.data !== undefined) {
 				if(msg.content.data.length > 0) {
 					message = msg.sender.displayname + ": " + msg.content.data[0].name + " " + msg.content.data[0].path;
