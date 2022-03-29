@@ -74,7 +74,7 @@ function connectSocket() {
 					return;
 				}
 			}
-			message = msg.sender.displayname + ": " + message.replace(new RegExp("&" + "#" + "x27;", "g"), "'").replace(/&quot;/g, '"');
+			message = msg.sender.displayname + ": " + message;
 			writeToTrace(message);
 		}
 	});
